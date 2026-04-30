@@ -118,6 +118,7 @@ nav ul li a:hover {
     text-align: center;
     color: var(--texto-claro);
     background-color: #2F5A3B; /* Fundo temporário antes da imagem ser adicionada */
+    background-image: url("image/inicio.jpg");
 }
 
 .hero-bg {
@@ -178,6 +179,7 @@ nav ul li a:hover {
     flex: 1;
     height: 350px;
     background-color: var(--placeholder-bg);
+    background-image: url("image/equipe.jpg");
     border-radius: 8px;
 }
 
