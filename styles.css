@@ -1,322 +1,322 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
+/* --- VARIÁVEIS DE CORES --- */
 :root {
-    --cor-fundo: #ffffff;
-    --cor-texto: #333333;
-    --cor-verde-escuro: #1b4332; /* Verde principal do RUMOS */
-    --cor-verde-claro: #2d6a4f;
-    --cor-verde-botao: #40916c;
-    --cor-branca: #ffffff;
+    /* Cor extraída exatamente do botão do PDF */
+    --verde-rumos: #2F5A3B; 
+    --verde-hover: #1e3b26;
+    --texto-escuro: #333333;
+    --texto-claro: #ffffff;
+    --fundo-claro: #f8f9fa;
+    --fundo-cinza: #ebebeb;
+    --placeholder-bg: #e0e0e0; /* Cor de fundo temporária para áreas de imagem vazias */
 }
 
+/* --- RESET E ESTILOS GERAIS --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+    color: var(--texto-escuro);
+    line-height: 1.6;
 }
 
-/* GERAL */
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    color: var(--cor-verde-escuro);
-    margin-bottom: 40px;
-    text-transform: uppercase;
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    font-weight: normal;
 }
 
-/* BOTÕES */
-.btn-solid {
-    background-color: var(--cor-verde-botao);
-    color: var(--cor-branca);
-    padding: 10px 24px;
-    border-radius: 5px;
+a {
     text-decoration: none;
-    font-weight: 600;
+    color: inherit;
+}
+
+.btn {
+    background-color: var(--verde-rumos);
+    color: var(--texto-claro);
+    padding: 12px 24px;
     border: none;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s;
+    font-weight: bold;
 }
 
-.btn-solid:hover {
-    background-color: var(--cor-verde-escuro);
+.btn:hover {
+    background-color: var(--verde-hover);
 }
 
-.btn-outline {
+/* --- CLASSES PARA ESPAÇOS DE IMAGENS FUTURAS --- */
+/* Estas classes mantêm o tamanho para não quebrar o layout antes de você colocar as fotos */
+.logo-placeholder {
+    width: 120px;
+    height: 40px;
     background-color: transparent;
-    color: var(--cor-branca);
-    padding: 12px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    border: 2px solid var(--cor-branca);
-    transition: 0.3s;
 }
 
-.btn-outline:hover {
-    background-color: var(--cor-branca);
-    color: var(--cor-verde-escuro);
+.logo-footer {
+    width: 120px;
+    height: 40px;
+    background-color: transparent;
 }
 
-/* CABEÇALHO */
-.header {
-    background-color: var(--cor-branca);
+.icon-placeholder {
+    height: 60px;
+    width: 60px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    background-color: var(--placeholder-bg);
+}
+
+.mapa-placeholder {
+    height: 300px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--verde-hover);
+    border-radius: 8px;
+}
+
+/* --- HEADER / NAVBAR --- */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    position: fixed;
+    padding: 15px 5%;
+    background-color: var(--texto-claro);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.logo h2 {
-    color: var(--cor-verde-escuro);
-}
-
-.nav-links {
+nav ul {
+    list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.nav-links a {
-    color: var(--cor-texto);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+nav ul li a {
+    font-size: 14px;
+    font-weight: 500;
 }
 
-.nav-links a:hover {
-    color: var(--cor-verde-botao);
+nav ul li a:hover {
+    color: var(--verde-rumos);
 }
 
-/* HERO SECTION */
+/* --- SESSÃO 1: HERO --- */
 .hero {
-    height: 100vh;
-    margin-top: 60px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image/principal.jpg'); /* Coloque a imagem da aldeia aqui */
+    position: relative;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--texto-claro);
+    background-color: #2F5A3B; /* Fundo temporário antes da imagem ser adicionada */
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Aqui você pode adicionar futuramente: background-image: url('sua-imagem.jpg'); */
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
+    opacity: 0.5;
 }
 
 .hero-content {
-    color: var(--cor-branca);
+    position: relative;
+    z-index: 2;
     max-width: 800px;
+    padding: 20px;
 }
 
-.hero-title {
-    font-size: 60px;
+.hero h1 {
+    font-size: 3.5rem;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
-.hero-subtitle {
-    font-size: 24px;
-    font-weight: 400;
+.hero h2 {
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
-.hero-desc {
-    font-size: 18px;
-    margin-bottom: 40px;
-    line-height: 1.6;
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
 }
 
-/* QUEM SOMOS */
-.about {
-    padding: 80px 50px;
-    background-color: var(--cor-branca);
-}
-
-.about-container {
+/* --- SESSÃO 2: QUEM SOMOS --- */
+.quem-somos {
+    padding: 80px 5%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
+    align-items: center;
 }
 
-.about-text {
+.quem-somos-text {
     flex: 1;
-    font-size: 16px;
-    line-height: 1.8;
 }
 
-.about-text p {
+.quem-somos-text h2 {
+    font-size: 2rem;
+    color: var(--verde-rumos);
     margin-bottom: 20px;
 }
 
-.about-img {
+.quem-somos-img {
     flex: 1;
+    height: 350px;
+    background-color: var(--placeholder-bg);
+    border-radius: 8px;
 }
 
-.img-placeholder {
-    width: 100%;
-    height: 300px;
-    background-color: #ddd;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image/equipe.jpg');
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
+/* --- SESSÃO 3: O QUE É UMA EXPEDIÇÃO --- */
+.o-que-e {
+    padding: 80px 5%;
+    background-color: var(--fundo-claro);
+    text-align: center;
 }
 
-/* GRIDS (PILARES E NÍVEIS) */
-.skills-section, .levels-section {
-    padding: 80px 50px;
-    background-color: #f9f9f9;
+.o-que-e h2 {
+    font-size: 2rem;
+    color: var(--verde-rumos);
+    margin-bottom: 40px;
 }
 
-.levels-section {
-    background-color: var(--cor-branca);
-}
-
-.grid-4-cols {
+.cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.grid-3-cols {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
 .card {
-    background-color: var(--cor-branca);
+    background: var(--texto-claro);
     padding: 30px 20px;
     border-radius: 8px;
-    text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--cor-verde-botao);
 }
 
-.card h3 {
-    color: var(--cor-verde-escuro);
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-.card p {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.card-green {
-    background-color: var(--cor-verde-escuro);
-    color: var(--cor-branca);
-    border-top: none;
-}
-
-.card-green h3 {
-    color: var(--cor-branca);
-}
-
-/* EXPEDIÇÃO 2026 */
-.expedition-2026 {
-    padding: 80px 50px;
-    background-color: #f1f8f5;
+/* --- SESSÃO 4: NÍVEIS DE EXPEDIÇÃO --- */
+.niveis {
+    padding: 80px 5%;
     text-align: center;
 }
 
-.expedition-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
+.niveis h2 {
+    font-size: 2rem;
+    color: var(--verde-rumos);
+    margin-bottom: 40px;
 }
 
-.expedition-content ul {
-    margin-left: 20px;
-    margin-top: 10px;
-    line-height: 1.8;
+/* --- SESSÃO 5: MARCOS --- */
+.marcos {
+    padding: 80px 5%;
+    background-color: var(--verde-rumos);
+    color: var(--texto-claro);
+    text-align: center;
 }
 
-/* FOOTER / CONTATO */
-.footer {
-    background-color: var(--cor-verde-escuro);
-    color: var(--cor-branca);
-    padding: 50px 50px 20px 50px;
+.marcos h2 {
+    margin-bottom: 40px;
 }
 
-.footer-container {
+.marcos-grid {
     display: flex;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto;
+    justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
-.footer-info, .footer-form {
+/* --- SESSÃO 6: 1ª EXPEDIÇÃO 2026 --- */
+.expedicao-2026 {
+    padding: 80px 5%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.expedicao-img {
+    flex: 1;
+    height: 400px;
+    background-color: var(--placeholder-bg);
+    border-radius: 8px;
+}
+
+.expedicao-text {
     flex: 1;
 }
 
-.footer-info h3, .footer-form h3 {
+.expedicao-text h2 {
+    color: var(--verde-rumos);
     margin-bottom: 20px;
 }
 
-.footer-info p {
-    margin-bottom: 10px;
-    font-size: 14px;
+.expedicao-text ul {
+    margin-left: 20px;
+    margin-top: 15px;
 }
 
-.footer-form {
+/* --- SESSÃO 7: CONTATO --- */
+.contato {
+    padding: 80px 5%;
+    background-color: var(--fundo-cinza);
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 40px;
 }
 
-.footer-form input, .footer-form textarea {
+.contato-info, .contato-form {
+    flex: 1;
+}
+
+.contato-info h2 {
+    color: var(--verde-rumos);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.footer-bottom {
+/* --- FOOTER --- */
+footer {
+    background-color: var(--verde-hover);
+    color: var(--texto-claro);
     text-align: center;
-    margin-top: 40px;
-    font-size: 12px;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    padding-top: 20px;
+    padding: 30px 5%;
 }
 
-/* RESPONSIVIDADE */
-@media only screen and (max-width: 768px) {
-    .header {
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .quem-somos, .expedicao-2026, .contato {
         flex-direction: column;
-        padding: 15px;
+    }
+    
+    header {
+        flex-direction: column;
         gap: 15px;
-    }
-    
-    .about-container, .footer-container {
-        flex-direction: column;
-    }
-    
-    .hero-title {
-        font-size: 40px;
     }
 }
