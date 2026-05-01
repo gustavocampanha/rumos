@@ -1,137 +1,360 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>RUMOS - Expedições de Saúde Humanitária</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header class="header">
-        <div class="logo">
-            <!-- Coloque a logo verde aqui -->
-            <h2>RUMOS</h2> 
-        </div>
-        <nav class="nav-links">
-            <a href="#home">Início</a>
-            <a href="#about">Quem Somos</a>
-            <a href="#expedicoes">Expedições</a>
-            <a href="#marcos">Marcos</a>
-            <a href="#contato">Contato</a>
-        </nav>
-        <div class="header-btn">
-            <a href="#about" class="btn-solid">Saiba Mais</a>
-        </div>
-    </header>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <!-- Canto Esquerdo: Logo e Texto -->
+    <div class="logo-container">
+      <img src="images/logo_rumos.jpg" alt="Logo Rumos" class="logo-img">
+      <div class="logo-text">
+        <h1>RUMOS</h1>
+        <span>Expedições de Saúde Humanitária</span>
+      </div>
+    </div>
 
-    <!-- HERO SECTION (Capa) -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1 class="hero-title">RUMOS</h1>
-            <h2 class="hero-subtitle">Expedições de Saúde Humanitária</h2>
-            <p class="hero-desc">
-                Promovendo ações clínico-cirúrgicas em regiões socioeconomicamente vulneráveis do Brasil!
-            </p>
-            <a href="#about" class="btn-outline">Conheça Nosso Projeto</a>
-        </div>
-    </section>
+    <!-- Centro: Menu de Navegação -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#quem-somos">Quem Somos</a></li>
+        <li><a href="#expedicoes">Expedições</a></li>
+        <li><a href="#marcos">Marcos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
 
-    <!-- QUEM SOMOS -->
-    <section class="about" id="about">
-        <h2 class="section-title">QUEM SOMOS</h2>
-        <div class="about-container">
-            <div class="about-text">
-                <p>O Projeto Rumos é uma iniciativa desenvolvida por estudantes e professores da Faculdade de Medicina de Ribeirão Preto (FMRP-USP). Somos um movimento de saúde humanitária comprometido com a equidade em saúde e o desenvolvimento social.</p>
-                <p>Nossas expedições levam atendimentos clínicos, atividades educacionais e pesquisa para comunidades que enfrentam fragilidades estruturais na rede de saúde, promovendo não apenas assistência, mas também conhecimento e transformação social.</p>
-            </div>
-            <!-- Pode colocar uma imagem da equipe aqui -->
-            <div class="about-img">
-                <div class="img-placeholder">Imagem da Equipe</div>
-            </div>
-        </div>
-    </section>
+    <!-- Canto Direito: Botão -->
+    <a href="#saiba-mais" class="btn-saiba-mais">Saiba Mais</a>
+    
+    <!-- Ícone Menu Mobile (Hambúrguer) -->
+    <div class="menu-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </header>
 
-    <!-- O QUE É UMA EXPEDIÇÃO (4 Pilares) -->
-    <section class="skills-section" id="expedicoes">
-        <h2 class="section-title">O QUE É UMA EXPEDIÇÃO?</h2>
-        <div class="grid-4-cols">
-            <div class="card">
-                <h3>Ação de Assistência</h3>
-                <p>Atendimentos clínicos e cirúrgicos para populações que enfrentam fragilidades estruturais na rede de saúde.</p>
-            </div>
-            <div class="card">
-                <h3>Ação Local</h3>
-                <p>Atuação focada nas demandas específicas da comunidade, fortalecendo a rede de apoio regional.</p>
-            </div>
-            <div class="card">
-                <h3>Formato Imersivo</h3>
-                <p>3 a 5 dias de atuação contínua. Vivência direta da realidade social e sanitária, construindo vínculo.</p>
-            </div>
-            <div class="card">
-                <h3>Produção de Conhecimento</h3>
-                <p>Levantamento de dados epidemiológicos, medidas de saúde pública e pesquisa aplicada.</p>
-            </div>
-        </div>
-    </section>
+  <!-- ================= HERO ================= -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>RUMOS</h1>
+      <h2>Expedições de Saúde Humanitária</h2>
+      <p>Promovendo ações clínico-cirúrgicas em regiões socioeconomicamente vulneráveis do Brasil</p>
+      <a href="#projeto" class="btn-hero">Conheça Nosso Projeto</a>
+    </div>
+  </section>
 
-    <!-- OS 3 NÍVEIS DE EXPEDIÇÃO -->
-    <section class="levels-section">
-        <h2 class="section-title">OS 3 NÍVEIS DE EXPEDIÇÃO</h2>
-        <div class="grid-3-cols">
-            <div class="card card-green">
-                <h3>AÇÃO LOCAL</h3>
-                <p>Intervenções pontuais e direcionadas em comunidades parceiras.</p>
-            </div>
-            <div class="card card-green">
-                <h3>EXPEDIÇÃO PILOTO</h3>
-                <p>Primeiro contato estruturado para mapeamento em novas regiões.</p>
-            </div>
-            <div class="card card-green">
-                <h3>EXPEDIÇÃO COMPLETA</h3>
-                <p>Ação de longa duração, integrando assistência, ensino e pesquisa.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 1ª EXPEDIÇÃO 2026 -->
-    <section class="expedition-2026">
-        <div class="expedition-content">
-            <h2 class="section-title">1ª EXPEDIÇÃO 2026</h2>
-            <p>A primeira expedição de 2026 terá foco especial em Saúde da Mulher e Ginecologia, atendendo a população e demandas voltadas à saúde feminina.</p>
-            
-            <h3 style="margin-top: 20px; color: var(--cor-verde-escuro);">Atividades Previstas:</h3>
-            <ul>
-                <li>Atendimentos ginecológicos</li>
-                <li>Coleta de Papanicolau</li>
-                <li>Orientações de planejamento familiar</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- FOOTER / CONTATO -->
-    <footer class="footer" id="contato">
-        <div class="footer-container">
-            <div class="footer-info">
-                <h3>RUMOS</h3>
-                <p>FMRP - USP</p>
-                <p><strong>Informações de Contato:</strong></p>
-                <p>Email: contato@projetorumos.org</p>
-            </div>
-            <div class="footer-form">
-                <h3>ENTRE EM CONTATO</h3>
-                <input type="text" placeholder="Seu Nome">
-                <input type="email" placeholder="Seu E-mail">
-                <textarea placeholder="Sua Mensagem" rows="3"></textarea>
-                <button class="btn-solid">Enviar Mensagem</button>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Projeto Rumos - Todos os direitos reservados.
-        </div>
-    </footer>
-
+  <!-- Script no final da página -->
+  <script src="script.js"></script>
 </body>
 </html>
+
+<!-- ================= QUEM SOMOS ================= -->
+  <section id="quem-somos" class="quem-somos">
+    <div class="quem-somos-container">
+      
+      <!-- Coluna de Texto -->
+      <div class="quem-somos-text">
+        <h2>Quem Somos</h2>
+        <p>O Projeto Rumos é uma iniciativa desenvolvida por estudantes e professores da Faculdade de Medicina de Ribeirão Preto (FMRP-USP). Somos um movimento de saúde humanitária comprometido com a equidade em saúde e o desenvolvimento social.</p>
+        <p>Nossas expedições levam atendimentos clínicos, atividades educativas e pesquisa para comunidades que enfrentam fragilidades estruturais na rede de saúde, promovendo não apenas assistência, mas também conhecimento e transformação social.</p>
+        
+        <div class="valores">
+          <div class="valor-item">
+            <!-- Ícone de Coração (Empatia) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a3c34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>Empatia</span>
+          </div>
+          
+          <div class="valor-item">
+            <!-- Ícone de Pessoas (Solidariedade) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a3c34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span>Solidariedade</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna da Imagem -->
+      <div class="quem-somos-image">
+        <img src="images/equipe.jpg" alt="Equipe do Projeto Rumos">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= O QUE É UMA EXPEDIÇÃO ================= -->
+  <section id="expedicoes" class="expedicoes">
+    <div class="expedicoes-header">
+      <h2>O que é uma Expedição?</h2>
+      <div class="linha-decorativa"></div>
+    </div>
+
+    <div class="expedicoes-grid">
+      <!-- Card 1: Assistência -->
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3b6b50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+          <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
+          <circle cx="20" cy="10" r="2"/>
+        </svg>
+        <h3>Ação de Assistência</h3>
+        <p>Atendimentos clínicos e cirúrgicos para populações que enfrentam fragilidades estruturais na rede de saúde e longas distâncias até referências hospitalares.</p>
+      </div>
+
+      <!-- Card 2: Formato Imersivo -->
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3b6b50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <h3>Formato Imersivo</h3>
+        <p>3 a 5 dias de atuação contínua com estrutura imersiva. Vivência direta da realidade social e sanitária, construindo vínculo com a comunidade.</p>
+      </div>
+
+      <!-- Card 3: Conhecimento -->
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3b6b50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path>
+          <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path>
+        </svg>
+        <h3>Produção de Conhecimento</h3>
+        <p>Levantamento de dados epidemiológicos, formulação de medidas de saúde pública e desenvolvimento de pesquisa aplicada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OS 3 NÍVEIS DE EXPEDIÇÃO ================= -->
+  <section id="niveis" class="niveis">
+    <div class="niveis-header">
+      <h2>Os 3 Níveis de Expedição</h2>
+    </div>
+
+    <div class="niveis-grid">
+      <!-- Nível 1 -->
+      <div class="nivel-card">
+        <div class="badge badge-1">1</div>
+        <h3>Ação Local</h3>
+        <ul>
+          <li>Ações de curta duração (1 dia)</li>
+          <li>Populações próximas de Ribeirão Preto</li>
+          <li>Retorno diário</li>
+        </ul>
+      </div>
+
+      <!-- Nível 2 (Destaque) -->
+      <div class="nivel-card highlight">
+        <div class="badge badge-2">2</div>
+        <h3>Expedição Piloto</h3>
+        <ul>
+          <li>Ações de curta duração (1-2 dias)</li>
+          <li>Populações próximas de Ribeirão Preto</li>
+          <li>Hospedagem local dos voluntários</li>
+        </ul>
+      </div>
+
+      <!-- Nível 3 -->
+      <div class="nivel-card">
+        <div class="badge badge-3">3</div>
+        <h3>Expedição Completa</h3>
+        <ul>
+          <li>Ações de média duração (3-5 dias)</li>
+          <li>Hospedagem local dos voluntários</li>
+          <li>Territórios variados</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARCOS JÁ CONQUISTADOS ================= -->
+  <section id="marcos" class="marcos">
+    <div class="marcos-header">
+      <h2>Marcos Já Conquistados</h2>
+    </div>
+
+    <div class="marcos-grid">
+      <!-- Card 1 -->
+      <div class="marco-card">
+        <img src="images/marcos_ma.jpeg" alt="São Luís, MA">
+        <div class="marco-info">
+          <h3>São Luís</h3>
+          <p>MA</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="marco-card">
+        <img src="images/marcos_am.jpeg" alt="Parintins, AM">
+        <div class="marco-info">
+          <h3>Parintins</h3>
+          <p>AM</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="marco-card">
+        <img src="images/marcos_mg.jpg" alt="Belo Horizonte, MG">
+        <div class="marco-info">
+          <h3>Belo Horizonte</h3>
+          <p>MG</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="marco-card">
+        <img src="images/marcos_pa.jpg" alt="Belterra, PA">
+        <div class="marco-info">
+          <h3>Belterra</h3>
+          <p>PA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 1ª EXPEDIÇÃO 2026 ================= -->
+  <section id="expedicao-2026" class="expedicao-2026">
+    <div class="expedicao-2026-container">
+      
+      <!-- Coluna da Imagem (Esquerda) -->
+      <div class="expedicao-2026-image">
+        <img src="images/equipe.jpg" alt="Equipe do Projeto Rumos">
+      </div>
+
+      <!-- Coluna de Texto (Direita) -->
+      <div class="expedicao-2026-text">
+        <h2>1ª Expedição 2026</h2>
+        <p>Nossa primeira expedição de 2026 terá foco especial em <strong>Saúde da Mulher e Ginecologia</strong>, atendendo a populações com alta demanda e baixa cobertura de serviços.</p>
+        
+        <h3>Atividades Previstas:</h3>
+        <ul>
+          <li>Atendimentos de saúde da mulher e queixas ginecológicas</li>
+          <li>Avaliação de gestantes</li>
+          <li>Orientação sobre contracepção e ISTs</li>
+          <li>Educação em saúde com adolescentes e mulheres</li>
+          <li>Coleta de preventivo (quando houver estrutura)</li>
+        </ul>
+
+        <a href="#saiba-mais-expedicao" class="btn-expedicao">Saiba Mais Sobre a Expedição</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ENTRE EM CONTATO ================= -->
+  <section id="contato" class="contato">
+    <div class="contato-header">
+      <h2>Entre em Contato</h2>
+    </div>
+
+    <div class="contato-container">
+      
+      <!-- Coluna Esquerda: Informações -->
+      <div class="contato-info">
+        <h3>Informações de Contato</h3>
+        
+        <div class="info-bloco">
+          <h4>Diretores</h4>
+          <p>Júlia Nascimento</p>
+          <p>Guilherme Garcia</p>
+        </div>
+
+        <div class="info-bloco">
+          <h4>Email</h4>
+          <p>expedicaorumos@gmail.com</p>
+        </div>
+
+        <div class="info-bloco">
+          <h4>Instagram</h4>
+          <p>@rumos_expedicao</p>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: Formulário -->
+      <div class="contato-form">
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Sua mensagem" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <!-- Coluna 1: Sobre Rumos -->
+      <div class="footer-sobre">
+        <h3>Sobre Rumos</h3>
+        <p>Expedições de Saúde Humanitária desenvolvidas por estudantes e professores da FMRP-USP com propósito de promover ações clínico-cirúrgicas em regiões socioeconomicamente vulneráveis.</p>
+      </div>
+
+      <!-- Coluna 2: Links Rápidos -->
+      <div class="footer-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="#quem-somos">Quem Somos</a></li>
+          <li><a href="#expedicoes">Expedições</a></li>
+          <li><a href="#marcos">Marcos Conquistados</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Contato -->
+      <div class="footer-contato">
+        <h3>Contato</h3>
+        <ul>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+              <polyline points="3 7 12 13 21 7"></polyline>
+            </svg>
+            <span>expedicaorumos@gmail.com</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>(31) 99526-3150</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>@rumos_expedicao</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
