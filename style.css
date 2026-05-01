@@ -1,11 +1,16 @@
 /* =========================================
+   IMPORTAÇÃO DE FONTES (Google Fonts)
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* =========================================
    RESET BÁSICO E SEGURANÇA
 ========================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Source Serif Pro', serif;
 }
 
 html, body {
@@ -15,6 +20,28 @@ html, body {
   overflow-x: hidden; 
   scroll-behavior: smooth;
   background-color: #ffffff; 
+}
+
+/* =========================================
+   TÍTULOS E TEXTOS GERAIS (PALETA DE CORES)
+========================================= */
+h1, h2 {
+  font-family: 'Cormorant SC', serif;
+  color: #00321F; /* Verde Escuro */
+}
+
+h3, h4 {
+  font-family: 'Cormorant SC', serif;
+  color: #00321F; /* Verde Escuro */
+}
+
+p, span, li, label {
+  color: #436D46; /* Verde Médio */
+}
+
+/* Força os ícones SVG do HTML a usarem o Verde Escuro */
+.valor-item svg, .card svg {
+  stroke: #00321F !important;
 }
 
 /* =========================================
@@ -52,16 +79,14 @@ html, body {
 
 .logo-text h1 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #1a3c34;
   letter-spacing: 1px;
 }
 
 .logo-text span {
   font-size: 0.85rem;
-  color: #666666;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .nav-menu ul {
@@ -74,18 +99,18 @@ html, body {
 
 .nav-menu a {
   text-decoration: none;
-  color: #2c4238;
+  color: #00321F;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-  color: #558b6e;
+  color: #436D46;
 }
 
 .btn-saiba-mais {
-  background-color: #4a7c59;
+  background-color: #436D46;
   color: #ffffff;
   padding: 10px 24px;
   border-radius: 6px;
@@ -95,7 +120,7 @@ html, body {
 }
 
 .btn-saiba-mais:hover {
-  background-color: #365c42;
+  background-color: #00321F;
 }
 
 .menu-toggle {
@@ -108,7 +133,7 @@ html, body {
 .menu-toggle .bar {
   width: 25px;
   height: 3px;
-  background-color: #1a3c34;
+  background-color: #00321F;
   transition: 0.3s;
 }
 
@@ -116,7 +141,7 @@ html, body {
    SEÇÃO HERO (Início)
 ========================================= */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero.jpg');
+  background-image: linear-gradient(rgba(0, 50, 31, 0.6), rgba(0, 50, 31, 0.6)), url('images/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -131,46 +156,51 @@ html, body {
 }
 
 .hero-content {
-  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.hero-content h1, 
+.hero-content h2, 
+.hero-content p {
+  color: #ffffff; /* Override para branco sobre a imagem */
+}
+
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 700;
   letter-spacing: 4px;
   margin: 0 0 10px 0;
-  font-family: 'Georgia', serif;
 }
 
 .hero-content h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 600;
   margin: 0 0 20px 0;
+  letter-spacing: 1px;
 }
 
 .hero-content p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin: 0 0 30px 0;
   max-width: 650px;
 }
 
 .btn-hero {
-  background-color: #558b6e;
+  background-color: #436D46;
   color: #ffffff;
   padding: 14px 32px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-hero:hover {
-  background-color: #3b6b50;
+  background-color: #00321F;
   transform: scale(1.05);
 }
 
@@ -196,17 +226,14 @@ html, body {
 }
 
 .quem-somos-text h2 {
-  font-family: 'Georgia', serif;
-  font-size: 2.5rem;
-  color: #1a3c34;
+  font-size: 2.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 25px;
 }
 
 .quem-somos-text p {
-  font-size: 1.1rem;
-  color: #4a5c54;
+  font-size: 1.15rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -221,9 +248,8 @@ html, body {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #1a3c34;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .quem-somos-image {
@@ -241,7 +267,7 @@ html, body {
    SEÇÃO O QUE É UMA EXPEDIÇÃO
 ========================================= */
 .expedicoes {
-  background-color: #fbfaf6; 
+  background-color: #F9F8F5; /* Creme */
   padding: 80px 5%;
   width: 100%;
 }
@@ -252,9 +278,7 @@ html, body {
 }
 
 .expedicoes-header h2 {
-  font-family: 'Georgia', serif;
-  font-size: 2.5rem;
-  color: #1a3c34;
+  font-size: 2.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 15px;
@@ -263,7 +287,7 @@ html, body {
 .linha-decorativa {
   width: 60px;
   height: 3px;
-  background-color: #558b6e;
+  background-color: #436D46; /* Verde Médio */
   margin: 0 auto;
 }
 
@@ -296,17 +320,15 @@ html, body {
 }
 
 .card h3 {
-  font-family: 'Georgia', serif;
-  font-size: 1.1rem;
-  color: #1a3c34;
+  font-size: 1.3rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
 
 .card p {
-  font-size: 1rem;
-  color: #555555;
+  font-size: 1.05rem;
   line-height: 1.6;
 }
 
@@ -325,9 +347,7 @@ html, body {
 }
 
 .niveis-header h2 {
-  font-family: 'Georgia', serif;
-  font-size: 2.5rem;
-  color: #1a3c34;
+  font-size: 2.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -357,7 +377,7 @@ html, body {
 }
 
 .nivel-card.highlight {
-  border-color: #3b6b50; 
+  border-color: #436D46; /* Verde Médio */
 }
 
 .badge {
@@ -373,24 +393,23 @@ html, body {
 }
 
 .badge-1 {
-  background-color: #d2e4cd; 
-  color: #1a3c34;
+  background-color: #F9F8F5; /* Creme */
+  color: #00321F;
 }
 
 .badge-2 {
-  background-color: #558b6e; 
+  background-color: #436D46; /* Verde Médio */
   color: #ffffff;
 }
 
 .badge-3 {
-  background-color: #1a3c34; 
+  background-color: #00321F; /* Verde Escuro */
   color: #ffffff;
 }
 
 .nivel-card h3 {
-  font-family: 'Georgia', serif;
-  font-size: 1.2rem;
-  color: #1a3c34;
+  font-size: 1.3rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;
@@ -402,8 +421,7 @@ html, body {
 }
 
 .nivel-card li {
-  font-size: 1rem;
-  color: #555555;
+  font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 10px;
   position: relative;
@@ -414,7 +432,6 @@ html, body {
   content: '•';
   position: absolute;
   left: 0;
-  color: #555555;
   font-size: 1.2rem;
   line-height: 1.2;
 }
@@ -423,7 +440,7 @@ html, body {
    SEÇÃO MARCOS JÁ CONQUISTADOS
 ========================================= */
 .marcos {
-  background-color: #fbfaf6; 
+  background-color: #F9F8F5; /* Creme */
   padding: 80px 5%;
   width: 100%;
 }
@@ -434,9 +451,7 @@ html, body {
 }
 
 .marcos-header h2 {
-  font-family: 'Georgia', serif;
-  font-size: 2.5rem;
-  color: #1a3c34;
+  font-size: 2.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -478,16 +493,14 @@ html, body {
 }
 
 .marco-info h3 {
-  font-family: 'Georgia', serif;
-  font-size: 1.1rem;
-  color: #1a3c34;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .marco-info p {
-  font-size: 0.9rem;
-  color: #558b6e; 
+  font-size: 0.95rem;
   font-weight: bold;
 }
 
@@ -527,25 +540,21 @@ html, body {
 }
 
 .expedicao-2026-text h2 {
-  font-family: 'Georgia', serif;
-  font-size: 2.5rem;
-  color: #1a3c34;
+  font-size: 2.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
 
 .expedicao-2026-text p {
-  font-size: 1.1rem;
-  color: #4a5c54;
+  font-size: 1.15rem;
   line-height: 1.6;
   margin-bottom: 25px;
 }
 
 .expedicao-2026-text h3 {
-  font-family: 'Georgia', serif;
-  font-size: 1.2rem;
-  color: #1a3c34;
+  font-size: 1.3rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;
@@ -559,8 +568,7 @@ html, body {
 }
 
 .expedicao-2026-text li {
-  font-size: 1rem;
-  color: #555555;
+  font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 10px;
   position: relative;
@@ -571,29 +579,29 @@ html, body {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #555555;
 }
 
 .btn-expedicao {
-  background-color: #4a7c59;
+  background-color: #436D46;
   color: #ffffff;
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
   transition: background-color 0.3s ease;
   display: inline-block;
 }
 
 .btn-expedicao:hover {
-  background-color: #365c42;
+  background-color: #00321F;
 }
 
 /* =========================================
    SEÇÃO ENTRE EM CONTATO
 ========================================= */
 .contato {
-  background-color: #fbfaf6; 
+  background-color: #F9F8F5; /* Creme */
   padding: 80px 5%;
   width: 100%;
 }
@@ -604,9 +612,7 @@ html, body {
 }
 
 .contato-header h2 {
-  font-family: 'Georgia', serif;
-  font-size: 2.5rem;
-  color: #1a3c34;
+  font-size: 2.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -624,9 +630,8 @@ html, body {
 }
 
 .contato-info h3 {
-  font-family: 'Georgia', serif;
-  font-size: 1.5rem;
-  color: #1a3c34;
+  font-size: 1.6rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 30px;
@@ -637,22 +642,17 @@ html, body {
 }
 
 .info-bloco h4 {
-  font-size: 0.85rem;
-  color: #558b6e;
+  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .info-bloco p {
-  font-size: 1.05rem;
-  color: #4a5c54;
+  font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 8px;
-}
-
-.info-bloco p span {
-  color: #666666;
 }
 
 .contato-form {
@@ -666,10 +666,8 @@ html, body {
 }
 
 .form-group label {
-  font-family: 'Georgia', serif;
-  font-size: 1.1rem;
-  color: #1a3c34;
-  font-weight: bold;
+  font-size: 1.15rem;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
@@ -680,20 +678,19 @@ html, body {
   border: 1px solid #dcd8d1;
   border-radius: 6px;
   background-color: transparent;
-  font-size: 1rem;
-  color: #4a5c54;
+  font-size: 1.05rem;
   transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #558b6e;
+  border-color: #436D46;
 }
 
 .btn-enviar {
   width: 100%;
-  background-color: #4a7c59;
+  background-color: #436D46;
   color: #ffffff;
   padding: 15px;
   border: none;
@@ -705,15 +702,14 @@ html, body {
 }
 
 .btn-enviar:hover {
-  background-color: #365c42;
+  background-color: #00321F;
 }
 
 /* =========================================
    FOOTER
 ========================================= */
 .footer {
-  background-color: #0b2d1c; /* Verde escuro do print */
-  color: #ffffff;
+  background-color: #00321F; /* Verde Escuro */
   padding: 60px 5%;
   width: 100%;
 }
@@ -722,23 +718,26 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* A primeira coluna ocupa mais espaço */
+  grid-template-columns: 2fr 1fr 1fr; 
   gap: 50px;
 }
 
 .footer h3 {
-  font-family: 'Georgia', serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #ffffff; /* Override mantido para leitura no fundo escuro */
 }
 
-.footer p {
-  font-size: 0.95rem;
+.footer p, 
+.footer-links a, 
+.footer-contato li, 
+.footer-contato span {
+  font-size: 1.05rem;
   line-height: 1.6;
-  color: #d1dcd6; /* Tom esbranquiçado suave para leitura */
+  color: #F9F8F5; /* Creme para os textos do footer */
 }
 
 .footer-links ul {
@@ -749,9 +748,7 @@ html, body {
 }
 
 .footer-links a {
-  color: #d1dcd6;
   text-decoration: none;
-  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
@@ -771,20 +768,17 @@ html, body {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 0.95rem;
-  color: #d1dcd6;
 }
 
 .footer-contato svg {
-  min-width: 20px; /* Evita que o ícone esmague em telas menores */
+  min-width: 20px; 
+  stroke: #F9F8F5 !important; /* Ícones em creme */
 }
-
 
 /* =========================================
    RESPONSIVIDADE (Telas menores)
 ========================================= */
 @media (max-width: 992px) {
-  /* Header */
   .nav-menu {
     display: none;
     position: absolute;
@@ -815,7 +809,6 @@ html, body {
     display: flex;
   }
 
-  /* Seções com 2 colunas -> viram 1 coluna centralizada */
   .quem-somos-container,
   .expedicao-2026-container,
   .contato-container {
@@ -841,37 +834,33 @@ html, body {
     display: inline-block;
   }
 
-  /* Marcos - 2 Colunas no Tablet */
   .marcos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Footer - 2 Colunas no Tablet */
   .footer-container {
     grid-template-columns: 1fr 1fr;
   }
   
   .footer-sobre {
-    grid-column: 1 / -1; /* Faz a primeira coluna ocupar a linha toda */
+    grid-column: 1 / -1;
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  /* Hero */
   .hero-content h1 {
     font-size: 3rem;
   }
   
   .hero-content h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
-  /* Espaçamento Geral das Seções */
   .quem-somos, 
   .expedicoes, 
   .niveis, 
@@ -882,19 +871,18 @@ html, body {
     padding: 50px 5%;
   }
 
-  /* Tipografia responsiva */
   .quem-somos-text h2, 
   .expedicoes-header h2, 
   .niveis-header h2, 
   .marcos-header h2,
   .expedicao-2026-text h2,
   .contato-header h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .quem-somos-text p,
   .expedicao-2026-text p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   
   .valores {
@@ -906,7 +894,6 @@ html, body {
     padding: 30px 20px;
   }
 
-  /* Grids para 1 coluna no Mobile */
   .marcos-grid,
   .footer-container {
     grid-template-columns: 1fr;
