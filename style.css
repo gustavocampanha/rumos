@@ -39,7 +39,7 @@ p, span, li, label {
   color: #436D46; /* Verde Médio */
 }
 
-/* Força os ícones SVG do HTML a usarem o Verde Escuro */
+/* Força os ícones SVG do HTML a usarem o Verde Escuro por padrão */
 .valor-item svg, .card svg {
   stroke: #00321F !important;
 }
@@ -164,7 +164,7 @@ p, span, li, label {
 .hero-content h1, 
 .hero-content h2, 
 .hero-content p {
-  color: #ffffff; /* Override para branco sobre a imagem */
+  color: #ffffff; 
 }
 
 .hero-content h1 {
@@ -287,7 +287,7 @@ p, span, li, label {
 .linha-decorativa {
   width: 60px;
   height: 3px;
-  background-color: #436D46; /* Verde Médio */
+  background-color: #436D46; 
   margin: 0 auto;
 }
 
@@ -377,7 +377,7 @@ p, span, li, label {
 }
 
 .nivel-card.highlight {
-  border-color: #436D46; /* Verde Médio */
+  border-color: #436D46; 
 }
 
 .badge {
@@ -393,17 +393,17 @@ p, span, li, label {
 }
 
 .badge-1 {
-  background-color: #F9F8F5; /* Creme */
+  background-color: #F9F8F5; 
   color: #00321F;
 }
 
 .badge-2 {
-  background-color: #436D46; /* Verde Médio */
+  background-color: #436D46; 
   color: #ffffff;
 }
 
 .badge-3 {
-  background-color: #00321F; /* Verde Escuro */
+  background-color: #00321F; 
   color: #ffffff;
 }
 
@@ -440,7 +440,7 @@ p, span, li, label {
    SEÇÃO MARCOS JÁ CONQUISTADOS
 ========================================= */
 .marcos {
-  background-color: #F9F8F5; /* Creme */
+  background-color: #F9F8F5; 
   padding: 80px 5%;
   width: 100%;
 }
@@ -601,7 +601,7 @@ p, span, li, label {
    SEÇÃO ENTRE EM CONTATO
 ========================================= */
 .contato {
-  background-color: #F9F8F5; /* Creme */
+  background-color: #F9F8F5; 
   padding: 80px 5%;
   width: 100%;
 }
@@ -655,6 +655,10 @@ p, span, li, label {
   margin-bottom: 8px;
 }
 
+.info-bloco p span {
+  color: #666666;
+}
+
 .contato-form {
   flex: 1;
 }
@@ -706,10 +710,63 @@ p, span, li, label {
 }
 
 /* =========================================
+   LINKS COM ÍCONES (INSTAGRAM E FOOTER)
+========================================= */
+.link-contato {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none !important; /* Sem sublinhado NUNCA por padrão */
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.link-contato span {
+  color: inherit; 
+}
+
+/* Especificidade para a seção "Contato" (Verde Médio) */
+.info-bloco .link-contato {
+  color: #436D46;
+  font-size: 1.1rem;
+}
+
+.info-bloco .link-contato svg {
+  stroke: #436D46 !important;
+  transition: stroke 0.3s ease;
+}
+
+.info-bloco .link-contato:hover {
+  color: #00321F; /* Fica verde escuro ao passar o mouse, SEM SUBLINHADO */
+}
+
+.info-bloco .link-contato:hover svg {
+  stroke: #00321F !important;
+}
+
+/* Especificidade para o Footer (Creme) */
+.footer-contato .link-contato {
+  color: #F9F8F5;
+  font-weight: normal;
+}
+
+.footer-contato .link-contato svg {
+  stroke: #F9F8F5 !important;
+}
+
+.footer-contato .link-contato:hover {
+  color: #ffffff;
+}
+
+.footer-contato .link-contato:hover svg {
+  stroke: #ffffff !important;
+}
+
+/* =========================================
    FOOTER
 ========================================= */
 .footer {
-  background-color: #00321F; /* Verde Escuro */
+  background-color: #00321F; 
   padding: 60px 5%;
   width: 100%;
 }
@@ -728,7 +785,7 @@ p, span, li, label {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
-  color: #ffffff; /* Override mantido para leitura no fundo escuro */
+  color: #ffffff; 
 }
 
 .footer p, 
@@ -737,7 +794,7 @@ p, span, li, label {
 .footer-contato span {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #F9F8F5; /* Creme para os textos do footer */
+  color: #F9F8F5; 
 }
 
 .footer-links ul {
@@ -772,8 +829,8 @@ p, span, li, label {
 
 .footer-contato svg {
   min-width: 20px; 
-  stroke: #F9F8F5 !important; /* Ícones em creme */
 }
+
 
 /* =========================================
    RESPONSIVIDADE (Telas menores)
