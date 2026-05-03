@@ -45,7 +45,7 @@ p, span, li, label {
 }
 
 /* =========================================
-   HEADER
+   HEADER & LOGO
 ========================================= */
 .header {
   display: flex;
@@ -63,11 +63,11 @@ p, span, li, label {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
 
 .logo-img {
-  width: 45px;
+  width: 50px;
   height: auto;
   border-radius: 8px;
 }
@@ -79,14 +79,32 @@ p, span, li, label {
 
 .logo-text h1 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 2.2rem; 
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding-bottom: 5px; 
 }
 
 .logo-text span {
-  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  font-size: 0.95rem;
   font-weight: 600;
+  color: #00321F; 
+  letter-spacing: 1.5px;
+  font-family: 'Cormorant SC', serif;
+}
+
+/* A mágica da linha antes do FMRP USP */
+.logo-text span::before {
+  content: "";
+  flex-grow: 1; 
+  height: 1px;
+  background-color: #00321F; 
+  opacity: 0.6; 
+  min-width: 30px; 
 }
 
 .nav-menu ul {
@@ -716,7 +734,7 @@ p, span, li, label {
   display: flex;
   align-items: center;
   gap: 10px;
-  text-decoration: none !important; /* Sem sublinhado NUNCA por padrão */
+  text-decoration: none !important; 
   transition: color 0.3s ease;
   font-weight: 600;
 }
@@ -725,7 +743,6 @@ p, span, li, label {
   color: inherit; 
 }
 
-/* Especificidade para a seção "Contato" (Verde Médio) */
 .info-bloco .link-contato {
   color: #436D46;
   font-size: 1.1rem;
@@ -737,14 +754,13 @@ p, span, li, label {
 }
 
 .info-bloco .link-contato:hover {
-  color: #00321F; /* Fica verde escuro ao passar o mouse, SEM SUBLINHADO */
+  color: #00321F; 
 }
 
 .info-bloco .link-contato:hover svg {
   stroke: #00321F !important;
 }
 
-/* Especificidade para o Footer (Creme) */
 .footer-contato .link-contato {
   color: #F9F8F5;
   font-weight: normal;
