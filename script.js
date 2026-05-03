@@ -1,7 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+  document.addEventListener('DOMContentLoaded', () => {
   
   // =========================================
-  // MENU MOBILE (Mantido para funcionar no celular)
+  // MENU MOBILE
   // =========================================
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -22,29 +23,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (form) {
     form.addEventListener('submit', e => {
-      e.preventDefault(); // Impede a página de recarregar e perder os dados
+      e.preventDefault(); 
       
       const btn = form.querySelector('.btn-enviar');
       const textoOriginal = btn.textContent;
       
-      // Muda o texto do botão para dar feedback visual de carregamento
       btn.textContent = 'Enviando...';
       btn.disabled = true;
 
-      // Faz o envio silencioso (fetch) dos dados para a planilha
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
-          form.reset(); // Limpa os campos do formulário
-          btn.textContent = textoOriginal;
-          btn.disabled = false;
-        })
-        .catch(error => {
-          alert('Erro ao enviar mensagem. Tente novamente mais tarde.');
-          console.error('Erro!', error.message);
-          btn.textContent = textoOriginal;
-          btn.disabled = false;
-        });
+      // A MÁGICA ESTÁ AQUI: mode: 'no-cors'
+      fetch(scriptURL, { 
+        method: 'POST', 
+        body: new FormData(form),
+        mode: 'no-cors' 
+      })
+      .then(response => {
+        // Com 'no-cors', não conseguimos ler a resposta exata do Google, 
+        // mas se chegou no .then, o envio foi feito!
+        alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+        form.reset(); 
+        btn.textContent = textoOriginal;
+        btn.disabled = false;
+      })
+      .catch(error => {
+        alert('Erro ao enviar mensagem. Tente novamente mais tarde.');
+        console.error('Erro!', error.message);
+        btn.textContent = textoOriginal;
+        btn.disabled = false;
+      });
     });
   }
 });
