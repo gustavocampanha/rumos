@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-contato');
   
   // COLE A SUA URL DO GOOGLE APPS SCRIPT AQUI DENTRO DAS ASPAS
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbx9X4E9w4PbMLl5e8a_MnmN_ZaB7Va3mDAUPTjUBELVkVV9aIPzBincxyXPk4p7vKlM/exec';
+  const scriptURL = '(https://script.google.com/macros/s/AKfycbx9X4E9w4PbMLl5e8a_MnmN_ZaB7Va3mDAUPTjUBELVkVV9aIPzBincxyXPk4p7vKlM/exec)';
 
   if (form) {
     form.addEventListener('submit', e => {
